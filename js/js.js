@@ -4,15 +4,20 @@ var g = 1.622;
 var dt = 0.016683;
 var timer=null;
 var timerFuel=null;
+
 //NAVE
-var y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
-var v = 0;
+var y = 10; //altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
+var v = 0;	//velocidad de la nave
 var c = 100;
 var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (simplificado)
+
 //MARCADORES
-var velocidad = null;
+var velocidad = null;//joder, lo pone arriba Pau, es un marcador; FIRMADO: Yo. 
 var altura = null;
 var combustible = null;
+
+
+
 
 //al cargar por completo la página...
 window.onload = function(){
@@ -22,7 +27,8 @@ window.onload = function(){
 	combustible = document.getElementById("fuel");
 
 	
-	//definición de eventos
+	//definición de eventos:
+
 	//mostrar menú móvil
     	document.getElementById("showm").onclick = function () {
 		document.getElementsByClassName("c")[0].style.display = "block";
@@ -49,6 +55,13 @@ window.onload = function(){
 	start();
 }
 
+
+
+
+
+
+
+
 //Definición de funciones
 function start(){
 	//cada intervalo de tiempo mueve la nave
@@ -64,14 +77,18 @@ function moverNave(){
 	v +=a*dt;
 	y +=v*dt;
 	//actualizar marcadores
-	velocidad.innerHTML=v;
+	if(v>0){
+		velocidad.innerHTML=v;
+	}else{
+		velocidad.innerHTML=-v;
+	}	
 	altura.innerHTML=(70-y);
 	
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
-		stop();
+		stop();	//para cuadno la altura es mayor a un 70% de la pantalla      
 	}
 }
 function motorOn(){
