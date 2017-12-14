@@ -77,7 +77,8 @@ function moverNave(){
 	v +=a*dt;
 	y +=v*dt;
 	//actualizar marcadores
-	if(v>0){
+	
+	if(v>0){					//velocidad en valor absoluto
 		velocidad.innerHTML=v;
 	}else{
 		velocidad.innerHTML=-v;
