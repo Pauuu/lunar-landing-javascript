@@ -1,6 +1,5 @@
-
 //ENTORNO
-var g = 1.622;
+var g = 1.622; //gravedad
 var dt = 0.016683;
 var timer=null;
 var timerFuel=null;
@@ -8,13 +7,20 @@ var timerFuel=null;
 //NAVE
 var y = 10; //altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 var v = 0;	//velocidad de la nave
-var c = 100;
+var c = 10000; //cantidad combustible
 var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (simplificado)
 
 //MARCADORES
-var velocidad = null;//joder, lo pone arriba Pau, es un marcador; FIRMADO: Yo. 
+var velocidad = null; //joder, lo pone arriba Pau, es un marcador; FIRMADO: Yo. 
 var altura = null;
 var combustible = null;
+var aterrizado = false;
+
+
+
+
+
+
 
 
 
@@ -30,7 +36,7 @@ window.onload = function(){
 	//definición de eventos:
 
 	//mostrar menú móvil
-    	document.getElementById("showm").onclick = function () {
+    document.getElementById("showm").onclick = function () {
 		document.getElementsByClassName("c")[0].style.display = "block";
 		stop();
 	}
@@ -39,23 +45,32 @@ window.onload = function(){
 		document.getElementsByClassName("c")[0].style.display = "none";
 		start();
 	}
-	//encender/apagar el motor al hacer click en la pantalla
-	document.onclick = function () {
- 	  if (a==g){
-  		motorOn();
- 	  } else {
-  		motorOff();
- 	  }
-	}
-	//encender/apagar al apretar/soltar una tecla
-	document.onkeydown = motorOn;
-	document.onkeyup = motorOff;
 	
+	//encender/apagar el motor al hacer click en la pantalla
+	
+	document.onclick = function () { 
+		if (a==g){
+			motorOn();
+		} else {                                                 
+			motorOff();
+		}
+	}
+	
+	//encender/apagar al apretar/soltar una tecla cualquiera
+		
+		document.onkeydown = function(e){
+			if(e.keycode=32){
+				motorOn();
+			}
+		}		//cambio		
+		document.onkeyup = motorOff;
+
 	//Empezar a mover la nave justo después de cargar la página
 	start();
 }
 
-
+                 
+     
 
 
 
@@ -66,12 +81,10 @@ window.onload = function(){
 function start(){
 	//cada intervalo de tiempo mueve la nave
 	timer=setInterval(function(){ moverNave(); }, dt*1000);
-}
-
+}     
 function stop(){
 	clearInterval(timer);
 }
-
 function moverNave(){
 	//cambiar velocidad y posicion
 	v +=a*dt;
@@ -80,25 +93,40 @@ function moverNave(){
 	
 	if(v>0){					//velocidad en valor absoluto
 		velocidad.innerHTML=v;
-	}else{
+	} else {
 		velocidad.innerHTML=-v;
-	}	
+	}
 	altura.innerHTML=(70-y);
 	
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
-	} else { 
+	} else{ 
 		stop();	//para cuadno la altura es mayor a un 70% de la pantalla      
+		aterrizado = true;
 	}
 }
+
 function motorOn(){
 	//el motor da aceleración a la nave
-	a=-g;
-	//mientras el motor esté activado gasta combustible
-	if (timerFuel==null)
-	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
+	if (aterrizado){
+		motorOff();
+	} else {	
+
+		if (c > 0){
+			a=-g;
+		} 
+	
+		/*if (y>70){
+			timerFuel = 0;
+		}*/
+		//mientras el motor esté activado gasta combustible
+		if (timerFuel==null)
+		timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
+	}
 }
+
+
 function motorOff(){
 	a=g;
 	clearInterval(timerFuel);
@@ -106,7 +134,9 @@ function motorOff(){
 }
 function actualizarFuel(){
 	//Restamos combustible hasta que se agota
-	c-=0.1;
-	if (c < 0 ) c = 0;
+	c-= 0.1;
+	if (c < 0 ) { 
+		c = 0;
+	}
 	combustible.innerHTML=c;	
 }
