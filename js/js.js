@@ -1,5 +1,5 @@
 //ENTORNO
-var g = 1.622; //gravedad
+var g = 10.622; //gravedad
 var dt = 0.016683;
 var timer=null;
 var timerFuel=null;
@@ -7,7 +7,7 @@ var timerFuel=null;
 //NAVE
 var y = 10; //altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 var v = 0;	//velocidad de la nave
-var c = 10000; //cantidad combustible
+var c = 10; //cantidad combustible
 var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (simplificado)
 
 //MARCADORES
@@ -62,7 +62,7 @@ window.onload = function(){
 			if(e.keycode=32){
 				motorOn();
 			}
-		}		//cambio		
+		}		
 		document.onkeyup = motorOff;
 
 	//Empezar a mover la nave justo después de cargar la página
@@ -112,14 +112,10 @@ function motorOn(){
 	if (aterrizado){
 		motorOff();
 	} else {	
-
 		if (c > 0){
 			a=-g;
 		} 
-	
-		/*if (y>70){
-			timerFuel = 0;
-		}*/
+
 		//mientras el motor esté activado gasta combustible
 		if (timerFuel==null)
 		timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
