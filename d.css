@@ -1,0 +1,147 @@
+body,html{
+	height:100%;
+	padding:0px;
+	margin:0px;
+}
+
+.a{
+	background-color:#00bcd4;
+}
+
+.c{
+	background-color:#cddc39;
+	display:block !important;
+}
+
+.a,.c{
+	display:inline-block;
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.moon{
+	background-color:pink;
+	height:10%;
+	width:100%;
+	position:fixed;
+	bottom:0px;
+}
+
+
+#nave{
+	background-color:green;
+	text-align:center;
+	position:fixed;
+	top:10%;
+	width:100%;
+	height:20%;
+}
+
+#nave img{
+	height:100%;
+}
+
+#velocidad{
+	position:relative;
+	color:black;
+	bottom:82%;
+	left:6%
+}
+
+
+#altura{
+	position:relative;
+	color:black;
+	bottom:82%;
+	left:10%
+}
+
+#cpanel{}
+
+#botonPausa{
+	
+}
+
+#botonInfo{
+	
+}
+
+#botonReinicio{
+	
+}
+
+#hidem,#showm{
+	display:none;
+}
+
+#menu{
+	margin-left:54%;
+}
+
+#ventana{
+	width:100%;
+	
+}
+
+#instrucciones{
+	background-color:red;
+	display:none;
+	height:75%;
+	left:20%;
+	position:fixed;
+	top:7%;
+	width:57%;
+	z-index:1;
+}
+
+#opciones{
+	background-color:purple;
+	display:inline-block;
+	position:relative;
+	bottom:90%;
+	left:5%;
+	
+
+}
+
+#binfo{
+	font-size: 120%;	
+	margin:20%;
+}
+
+#breanudar{
+	font-size: 120%;
+	margin:20%;
+}
+
+#bsalir{
+	font-size: 120%;
+	margin:20%;
+}
+
+#titulo{
+	font-size:200%;
+	position:relative;
+	display:block;
+	bottom:90%;
+	left:50%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
