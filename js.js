@@ -48,14 +48,15 @@ window.onload = function(){
 	}
 	
 	//reiniciar el juego
-	document.getElementById("botonReinicio").onclick = function(){
+	/*document.getElementById("botonReinicio").onclick = function(){
 		reiniciar();
-	}
+	}*/
 
 	
 	//reanudar/pausar el juego con el boton del juego
 	document.getElementById("botonPause").onclick = function(){
 		if (pause == false){
+			stop();
 			pausa();
 			pause = true;
 		} 
@@ -64,12 +65,22 @@ window.onload = function(){
 	document.getElementById("breanudar").onclick = function(){
 		if(pause == true){
 			reanudar();
+			start();
 			pause = false;
 		}
-
 	}
 
-	
+	document.getElementById("binfo").onclick = function(){
+		informacion();
+	}
+
+	document.getElementById("atras").onclick = function(){
+		atras();
+	}
+
+	document.getElementById("bsalir").onclick = function(){
+		salir();
+	}
 
 	
 
@@ -107,13 +118,27 @@ window.onload = function(){
 //Definición de funciones   
 
 function pausa(){
-	document.getElementById("instrucciones").style.display="block";
+	document.getElementById("menu").style.display="block";
 	document.getElementById("pause").src="img/buttons/play.png";
 }
 
 function reanudar(){
-	document.getElementById("instrucciones").style.display="none";
-	document.getElementById("bsalir").src="img/buttons/pause.png";
+	document.getElementById("menu").style.display="none";
+	document.getElementById("pause").src="img/buttons/pause.png";
+}
+
+function informacion(){
+	document.getElementById("menu1").style.display="none";
+	document.getElementById("menu2").style.display="block";
+}
+
+function atras(){
+	document.getElementById("menu1").style.display="block";
+	document.getElementById("menu2").style.display="none";
+}
+
+function salir(){
+	alert("Estas a punto de salir del juego, seguro que quieres salir");
 }
 
 function start(){
@@ -127,20 +152,6 @@ function stop(){
 	clearInterval(timer);
 }
 
-function reiniciar(){	//arreglar
-	stop();
-	
-	timer=setInterval(function(){ moverNave(); }, dt*1000);
-	y = 10;
-	v = 0;
-	c = 10;
-	g = 10.622;
-	a = g;
-	dt = 0.016683;
-	timer=null;
-	timerFuel=null;
-	
-}
 
 function moverNave(){
 	
@@ -194,5 +205,9 @@ function actualizarFuel(){
 	}
 	combustible.innerHTML=c.toFixed();;
 }
+
+
+
+
 
 

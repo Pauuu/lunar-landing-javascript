@@ -75,7 +75,7 @@ body,html{
 	display:none;
 }
 
-#menu{
+#botones{
 	margin-left:54%;
 }
 
@@ -84,7 +84,7 @@ body,html{
 	
 }
 
-#instrucciones{
+#menu{
 	background-color:red;
 	display:none;
 	height:75%;
@@ -93,6 +93,20 @@ body,html{
 	top:7%;
 	width:57%;
 	z-index:1;
+}
+
+#menu1{
+	position: relative;
+	display: block;
+    bottom: 95%;
+}
+
+
+#menu2{
+    position: relative;
+    display: none;
+    bottom: 90%;
+    font-size: 120%;
 }
 
 #opciones{
@@ -126,9 +140,13 @@ body,html{
 	display:block;
 	bottom:90%;
 	left:50%;
-	
 }
 
+#atras{
+	position:relative;
+	bottom:10%;
+	margin:5%;
+}
 
 
 
