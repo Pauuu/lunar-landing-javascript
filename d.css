@@ -1,165 +1,149 @@
 body,html{
-	height:100%;
-	padding:0px;
-	margin:0px;
+  height:100%;
+  padding:0px;
+  margin:0px;
 }
-
+ 
 .a{
-	background-color:#00bcd4;
+  background-color:#00bcd4;
 }
-
+ 
 .c{
-	background-color:#cddc39;
-	display:block !important;
+  background-color:#cddc39;
+  display:block !important;
 }
-
+ 
 .a,.c{
-	display:inline-block;
-	width:50%;
-	height:100%;
-	float:left;
+  display:inline-block;
+  width:50%;
+  height:100%;
+  float:left;
 }
-
+ 
 .moon{
-	background-color:pink;
-	height:10%;
-	width:100%;
-	position:fixed;
-	bottom:0px;
+  background-color:pink;
+  height:10%;
+  width:100%;
+  position:fixed;
+  bottom:0px;
 }
-
-
+ 
+ 
 #nave{
-	background-color:green;
-	text-align:center;
-	position:fixed;
-	top:10%;
-	width:100%;
-	height:20%;
+  background-color:green;
+  text-align:center;
+position:fixed;
+  top:10%;
+  width:100%;
+  height:20%;
 }
-
+ 
 #nave img{
-	height:100%;
+  height:100%;
 }
-
+ 
 #velocidad{
-	position:relative;
-	color:black;
-	bottom:82%;
-	left:6%
+  position:relative;
+  color:black;
+  bottom:82%;
+  left:6%
 }
-
-
+ 
+ 
 #altura{
-	position:relative;
-	color:black;
-	bottom:82%;
-	left:10%
+  position:relative;
+  color:black;
+  bottom:82%;
+  left:10%
 }
-
+ 
 #cpanel{}
 
 #botonPausa{
-	
+  
 }
-
+ 
 #botonInfo{
-	
+  
 }
-
+ 
 #botonReinicio{
-	
+  
 }
-
+ 
 #hidem,#showm{
-	display:none;
+  display:none;
 }
-
+ 
 #botones{
-	margin-left:54%;
+  margin-left:54%;
 }
-
+ 
 #ventana{
-	width:100%;
-	
+  width:100%;
+  
 }
-
+ 
 #menu{
-	background-color:red;
-	display:none;
-	height:75%;
-	left:20%;
-	position:fixed;
-	top:7%;
-	width:57%;
-	z-index:1;
+  background-color:red;
+  display:none;
+  height:75%;
+  left:20%;
+  position:fixed;
+  top:7%;
+  width:57%;
+  z-index:1;
 }
-
+ 
 #menu1{
-	position: relative;
-	display: block;
+  position: relative;
+  display: block;
     bottom: 95%;
 }
-
-
+ 
+ 
 #menu2{
     position: relative;
     display: none;
     bottom: 90%;
     font-size: 120%;
 }
-
+ 
 #opciones{
-	background-color:purple;
-	display:inline-block;
-	position:relative;
-	bottom:90%;
-	left:5%;
-	
-
+  background-color:purple;
+  display:inline-block;
+  position:relative;
+  bottom:90%;
+  left:5%;
+  
+ 
 }
 
 #binfo{
-	font-size: 120%;	
-	margin:20%;
+  font-size: 120%;  
+  margin:20%;
 }
-
+ 
 #breanudar{
-	font-size: 120%;
-	margin:20%;
+  font-size: 120%;
+  margin:20%;
 }
-
+ 
 #bsalir{
-	font-size: 120%;
-	margin:20%;
+  font-size: 120%;
+  margin:20%;
 }
-
+ 
 #titulo{
-	font-size:200%;
-	position:relative;
-	display:block;
-	bottom:90%;
-	left:50%;
+  font-size:200%;
+  position:relative;
+  display:block;
+  bottom:90%;
+  left:50%;
 }
-
+ 
 #atras{
-	position:relative;
-	bottom:10%;
-	margin:5%;
+  position:relative;
+  bottom:10%;
+  margin:5%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

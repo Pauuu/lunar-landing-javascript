@@ -62,7 +62,7 @@ window.onload = function(){
 		} 
 	}
 	
-	document.getElementById("breanudar").onclick = function(){
+	document.getElementById("botonReanudar").onclick = function(){
 		if(pause == true){
 			reanudar();
 			start();
@@ -70,15 +70,15 @@ window.onload = function(){
 		}
 	}
 
-	document.getElementById("binfo").onclick = function(){
+	document.getElementById("botonInfo").onclick = function(){
 		informacion();
 	}
 
-	document.getElementById("atras").onclick = function(){
+	document.getElementById("botonAtras").onclick = function(){
 		atras();
 	}
 
-	document.getElementById("bsalir").onclick = function(){
+	document.getElementById("botonSalir").onclick = function(){
 		salir();
 	}
 
@@ -128,13 +128,13 @@ function reanudar(){
 }
 
 function informacion(){
-	document.getElementById("menu1").style.display="none";
-	document.getElementById("menu2").style.display="block";
+	document.getElementById("submenu").style.display="none";
+	document.getElementById("instrucciones").style.display="block";
 }
 
 function atras(){
-	document.getElementById("menu1").style.display="block";
-	document.getElementById("menu2").style.display="none";
+	document.getElementById("submenu").style.display="block";
+	document.getElementById("instrucciones").style.display="none";
 }
 
 function salir(){
@@ -144,9 +144,8 @@ function salir(){
 function start(){
 	//cada intervalo de tiempo mueve la nave
 	timer=setInterval(function(){ moverNave(); }, dt*1000);
-	
-	
 }     
+
 
 function stop(){
 	clearInterval(timer);
