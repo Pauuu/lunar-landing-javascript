@@ -117,10 +117,8 @@ function atras(){
 function salir(){	//Pulsando la opción "About" se sale del juego o no
 	var x = confirm("Estas a punto de salir del juego, seguro que quieres salir");
 	if (x == true){
-		alert("pulsado aceptar");
 		window.location.href='https://github.com/Pauuu/LunarLander';
 	} else {
-		alert("pulsado cancelar");
 		window.location.href="https://rawgit.com/Pauuu/lunar-landing-javascript/master/lunarLander.html";
 	}
 }
