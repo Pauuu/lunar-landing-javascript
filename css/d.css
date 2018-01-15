@@ -1,0 +1,196 @@
+body,html{
+	height:100%;
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	background: url(../img/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-size:10%;
+	background-repeat:repeat;
+}
+
+.c{
+	display: inline;
+	width: 12%;
+	height: 26%;
+	float: right;
+	z-index:2;
+}
+
+.moon{
+	position:fixed;
+	bottom: 0;
+	width:100%;
+}
+
+.moon img{
+	position:fixed;
+	bottom: 0;
+	width:100%;
+}
+
+.win{
+	display:none;
+}
+
+.fail{
+	display:none;
+}
+
+#altura{
+	position: relative;
+	color: black;
+	top: 18%;
+	left: 2.9%;
+	z-index: 2;
+}
+
+#atras{
+	position:relative;
+	bottom:19%;
+	margin:5%;
+}
+
+#botones{
+	position: absolute;
+	right: 9%;
+	bottom:70%;
+	z-index:3;
+}
+
+#hidem,#showm{
+	display:none;
+}
+
+#instrucciones{
+    position: relative;
+    display: none;
+    bottom: 90%;
+    font-size: 120%;
+}
+
+#instrucciones p{
+	margin:10%;
+}
+
+#imgFuel{
+	position: absolute;
+	width: 1.1%;
+	bottom: 42.2%;
+	right: 47.9%;
+	z-index: 2;
+}
+
+#imgFire{
+	position: relative;
+	display: none;
+	height: 30%;
+	left: 50%;
+	bottom: 3%;
+	z-index: 1;
+}
+
+#imgNave{
+	display: block;
+	position: relative;
+	height: 64%;
+	left: 45%;
+	top:4%;	
+	z-index: 1;
+}
+
+li a:hover{
+	background-color: #555;
+    color: white;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul{
+	position:fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 0;
+}
+
+li img:hover{
+	background-color:grey;
+}
+
+#menu{
+	display:none;
+	height:75%;
+	left:20%;
+	position:fixed;
+	top:7%;
+	width:57%;
+	z-index:2;
+}
+
+#nave{
+	text-align:center;
+	position:fixed;
+	top:10%;
+	width:100%;
+	height:30%;
+	z-index:1;
+}
+
+
+#opciones{
+	display:inline;
+	position:relative;
+	bottom:90%;
+	
+}
+
+#reanudar,#info,#salir,#dificultad{
+	font-size: 120%;
+	margin:1%;
+}
+
+#submenu{
+	position: relative;
+	display: block;
+    bottom: 95%;
+	width:50%;
+	left:20%;
+}
+
+
+#titulo{
+	font-size:200%;
+	position:relative;
+	display:block;
+	bottom:90%;
+	left:50%;
+}
+
+#velocidad{
+	position: relative;
+    color: black;
+    top: 18%;
+    right: 0.4%;
+    z-index: 2;
+}
+
+#ventana{
+	width:100%;
+
+}
+
+
+
+
+
+
+
+
