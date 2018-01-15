@@ -31,6 +31,11 @@ body{
 	width:100%;
 }
 
+.ventana{
+	width:100%;
+
+}
+
 .win{
 	display:none;
 }
@@ -182,11 +187,30 @@ li img:hover{
     z-index: 2;
 }
 
-#ventana{
-	width:100%;
 
+
+#win{
+	display:none;
+	position: absolute;
+	bottom: 9%;
+	left: 24%;
+	z-index:4;
 }
 
+#win p{
+	bottom: 49%;
+	position: absolute;
+	left: 37%;
+	z-index: 3;
+}
+
+#volver{
+	position: absolute;
+	bottom: 20%;
+	left: 10%;
+	z-index: 4;
+	display: block;
+}
 
 
 

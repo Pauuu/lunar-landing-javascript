@@ -30,6 +30,13 @@ body{
 	width:100%;
 }
 
+.ventana{
+	width: 100%;
+	transform: rotate(90deg);
+	left: 9%;
+	position: relative;
+}
+
 #altura{
 	position: relative;
 	color: black;
@@ -171,10 +178,29 @@ li img:hover{
     z-index: 2;
 }
 
-#ventana{
-	width: 100%;
-	transform: rotate(90deg);
-	left: 9%;
-	position: relative;
+
+
+#win{
+	display:none;
+	bottom: 32%;
+	position: absolute;
+	width: 126%;
+	z-index: 3;
+	right: 0%;
+}
+
+#win p{
+	bottom: 49%;
+	position: absolute;
+	left: 37%;
+	z-index: 3;
+}
+
+#volver{
+	left: 45%;
+	position: absolute;
+	width: 28%;
+	height: 24%;
+	bottom: 5%;
 }
 

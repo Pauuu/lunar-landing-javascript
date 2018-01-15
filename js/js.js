@@ -69,8 +69,14 @@ window.onload = function(){
 
 	document.getElementById("salir").onclick = function(){
 		salir();
+	}
+	
+	document.getElementById("volver").onclick = function(){		
+		volver();
+		reinicio();
 		
 	}
+
 
 	//al hacer click en cualquier parte de la pantalla 
 	document.onclick = function () {
@@ -109,10 +115,16 @@ function informacion(){
 	document.getElementById("instrucciones").style.display="block";
 }
 
-function atras(){
+function atras(){	
 	document.getElementById("submenu").style.display="block";
 	document.getElementById("instrucciones").style.display="none";
 }
+
+function volver(){
+	document.getElementById("win").style.display="none";
+	document.getElementById("mensaje").style.display="none";
+}
+
 
 function salir(){	//Pulsando la opción "About" se sale del juego o no
 	var x = confirm("Estas a punto de salir del juego, seguro que quieres salir");
@@ -247,11 +259,11 @@ function moverNave(){
 	} else { 
 		stop();	//para cuadno la altura es mayor a un 70% de la pantalla      
 		aterrizado = true;
-
-		if(v < 5){
-			alert("¡Has ganado!");
+		document.getElementById("win").style.display="block";
+		if(v < 5){		
+			document.getElementById("mensaje").innerHTML = "¡Lo lograste!"; 
 		}else{
-			alert("Perdiste...");
+			document.getElementById("mensaje").innerHTML = "No pudiste lograrlo..."; 
 		}
 	}
 }
