@@ -41,6 +41,7 @@ Para la versión movil, basta con pulsar la pantalla.
 + En el juego, hay dos botones disponibles: reinicio y pausa.
 
 El de reinicio: reinicia el juego.
+
 El de pausa: pausa el jeugo y muestra el mení.
 
 ### Menú
