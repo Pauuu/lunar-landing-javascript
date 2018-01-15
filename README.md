@@ -7,7 +7,7 @@
 + Clase: DAM 1A
 + [Link a RawGit](https://rawgit.com/Pauuu/lunar-landing-javascript/master/lunarLander.html)
 
-###HTML e Imágenes
+### HTML e Imágenes
 [HTML Minimizado](https://github.com/Pauuu/lunar-landing-javascript/tree/HTML_Minimizado)
 
 Imágenes optimizadas: 
