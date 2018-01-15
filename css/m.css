@@ -30,13 +30,19 @@ body{
 	width:100%;
 }
 
+.ventana{
+	width: 100%;
+	transform: rotate(90deg);
+	left: 9%;
+	position: relative;
+}
+
 #altura{
 	position: relative;
 	color: black;
 	top: 39%;
 	left: 6.8%;
 	z-index: 2;
-	font-size:55%;
 }
 
 #atras{
@@ -170,13 +176,31 @@ li img:hover{
     top: 39%;
     right: 3.4%;
     z-index: 2;
-	font-size:55%;
 }
 
-#ventana{
-	width: 100%;
-	transform: rotate(90deg);
-	left: 9%;
-	position: relative;
+
+
+#win{
+	display:none;
+	bottom: 32%;
+	position: absolute;
+	width: 126%;
+	z-index: 3;
+	right: 0%;
+}
+
+#win p{
+	bottom: 49%;
+	position: absolute;
+	left: 37%;
+	z-index: 3;
+}
+
+#volver{
+	left: 45%;
+	position: absolute;
+	width: 28%;
+	height: 24%;
+	bottom: 5%;
 }
 
