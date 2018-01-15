@@ -121,7 +121,7 @@ function salir(){	//Pulsando la opción "About" se sale del juego o no
 		window.location.href='https://github.com/Pauuu/LunarLander';
 	} else {
 		alert("pulsado cancelar");
-		window.location.href="index.html";
+		window.location.href="https://rawgit.com/Pauuu/lunar-landing-javascript/master/lunarLander.html";
 	}
 }
 
