@@ -10,7 +10,7 @@
 ### HTML e Imágenes
 [HTML Minimizado](https://github.com/Pauuu/lunar-landing-javascript/tree/HTML_Minimizado)
 
-Imágenes optimizadas: 
+![Imagenes optimizadas](img/imagenesTiny.png)
 
 ---
 
