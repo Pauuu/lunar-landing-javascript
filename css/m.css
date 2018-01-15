@@ -36,6 +36,7 @@ body{
 	top: 39%;
 	left: 6.8%;
 	z-index: 2;
+	font-size:55%;
 }
 
 #atras{
@@ -169,6 +170,7 @@ li img:hover{
     top: 39%;
     right: 3.4%;
     z-index: 2;
+	font-size:55%;
 }
 
 #ventana{
