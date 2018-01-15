@@ -235,11 +235,11 @@ function moverNave(){
 	//actualizar marcadores
 	
 	if(v>0){					//velocidad en valor absoluto
-		velocidad.innerHTML=v.toFixed();
+		velocidad.innerHTML="m/s \n" + v.toFixed();
 	} else {
-		velocidad.innerHTML=-v.toFixed();
+		velocidad.innerHTML="m/s" + (-v.toFixed());
 	}
-	altura.innerHTML=70-y.toFixed();
+	altura.innerHTML=(70-y.toFixed()) + "m";
 	
 	//mover hasta que top sea un 71% de la pantalla
 	if (y<71){ 
